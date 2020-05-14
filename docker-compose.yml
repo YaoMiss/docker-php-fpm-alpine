@@ -1,9 +1,12 @@
-version: '3'
+version: "3"
 services:
   php-fpm:
-    build: 
-        context: ./
-        dockerfile: Dockerfile
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: php-fpm
     ports:
-      - 3000:3000
+      - 10010:8000
+    volumes:
+      - ./web:/var/www/html
+    command: php -S="0.0.0.0:8000" -t="/var/www/html"

@@ -1,0 +1,6 @@
+sudo: required
+services: docker
+script:
+  - docker build -t biyongyao/php-fpm-dev .
+after_script:
+  - docker images
