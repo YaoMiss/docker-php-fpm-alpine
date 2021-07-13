@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-alpine3.14
+FROM php:7.3-fpm-alpine3.13
 
 LABEL maintainer="Packie Pat <biyongyao@gmail.com>"
 
